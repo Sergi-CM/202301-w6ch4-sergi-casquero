@@ -41,3 +41,5 @@ const thingsAlreadyKnow = [
     thing: "New Zealand has the steepest residential area in the world",
   },
 ];
+
+export default thingsAlreadyKnow;
