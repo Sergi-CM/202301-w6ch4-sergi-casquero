@@ -1,9 +1,6 @@
 import inquirer from "inquirer";
 
-let port: number;
-let canEdit: boolean;
-
-const askPort = async () => {
+export const askPort = async () => {
   const userPort = await inquirer.prompt({
     name: "portnumber",
     type: "input",
@@ -14,7 +11,7 @@ const askPort = async () => {
   });
 };
 
-const askCanEdit = async (): Promise<void> => {
+export const askCanEdit = async (): Promise<void> => {
   const userCanEdit = await inquirer.prompt({
     name: "can-edit",
     type: "confirm",
@@ -24,6 +21,3 @@ const askCanEdit = async (): Promise<void> => {
     },
   });
 };
-
-await askPort();
-await askCanEdit();
