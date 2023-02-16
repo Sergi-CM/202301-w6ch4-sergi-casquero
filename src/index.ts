@@ -1,7 +1,7 @@
 import "./loadEnvironment.js";
 import express from "express";
 import morgan from "morgan";
-import { thingsRouter } from "./routers/thingsRouter.js";
+import thingsRouter from "./routers/thingsRouter.js";
 
 const port = process.env.PORT ?? 4100;
 

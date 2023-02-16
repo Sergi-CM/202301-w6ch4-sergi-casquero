@@ -11,3 +11,10 @@ export const getThingById = (req: Request, res: Response) => {
   );
   res.status(200).json(thingIknow);
 };
+
+export const deleteThingById = (req: Request, res: Response) => {
+  const listWithoutDeletedThing = thingsAlreadyKnow.filter(
+    (thing) => thing.id !== +req.params.id
+  );
+  res.status(200).json(listWithoutDeletedThing);
+};
