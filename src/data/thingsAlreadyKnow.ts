@@ -1,4 +1,4 @@
-const thingsAlreadyKnow = [
+const thingsAlreadyKnow: ThingStructure[] = [
   {
     id: 1,
     thing: "It snows in the Sahara Desert",

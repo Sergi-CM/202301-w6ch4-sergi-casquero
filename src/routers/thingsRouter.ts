@@ -1,7 +1,15 @@
 import { Router } from "express";
-import { getThingsList } from "../controllers/thingsControllers.js";
+import {
+  deleteThingById,
+  getThingById,
+  getThingsList,
+} from "../controllers/thingsControllers.js";
 
 // eslint-disable-next-line new-cap
-export const thingsRouter = Router();
+const thingsRouter = Router();
 
-thingsRouter.get("/", getThingsList);
+thingsRouter.get("/things", getThingsList);
+thingsRouter.get("/things/:id", getThingById);
+thingsRouter.delete("/things/:id", deleteThingById);
+
+export default thingsRouter;
