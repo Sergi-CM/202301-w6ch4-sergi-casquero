@@ -12,3 +12,5 @@ app.listen(port);
 app.use(morgan("dev"));
 
 app.use("/", thingsRouter);
+
+app.use(express.json());
